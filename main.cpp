@@ -28,8 +28,8 @@ int main()
 	/* Create screen */
 	Screen screen;
 
-	/* Draw triangle */
-	Triangle tri(screen,2,3);
+	/* Draw a line */
+	line(screen,ORIGIN_X,ORIGIN_Y,240,240);
 
 	/* Output */
 	screen.show();
