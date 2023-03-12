@@ -1,9 +1,6 @@
 #include <SDL2/SDL.h>
-#include "screen.h"
-#include "defs.h"
-#include "linec.h"
-#include "circle.h"
-#include "triangle.h"
+#include "include/screen.h"
+#include "include/defs.h"
 
 void line(Screen &screen,float x1,float y1, float x2, float y2)
 {
@@ -28,8 +25,15 @@ int main()
 	/* Create screen */
 	Screen screen;
 
-	/* Draw a line */
-	line(screen,ORIGIN_X,ORIGIN_Y,240,240);
+	/* Draw a triangle */
+  float a, b;
+  a = 13;
+  b = 10;
+  float hyp = hypot(10,10);
+
+	line(screen,ORIGIN_X,ORIGIN_Y,ORIGIN_X+a,ORIGIN_Y);
+  line(screen,ORIGIN_X+a,ORIGIN_Y,ORIGIN_X+a,ORIGIN_Y+b);
+  line(screen,ORIGIN_X,ORIGIN_Y,ORIGIN_X+a,ORIGIN_Y+b);
 
 	/* Output */
 	screen.show();

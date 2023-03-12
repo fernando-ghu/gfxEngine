@@ -1,3 +1,6 @@
+#ifndef INCLUDE_SCREEN_H
+#define INCLUDE_SCREEN_H
+
 #include<SDL2/SDL.h>
 #include<vector>
 
@@ -53,7 +56,7 @@ class Screen
 		}
 	}
 };
-
+#endif
 
 
 
