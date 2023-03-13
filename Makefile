@@ -7,7 +7,7 @@ ODIR = obj
 _DEPS = defs.h screen.h 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o
+_OBJ = main.o test-func.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o : %.cpp $(DEPS)
