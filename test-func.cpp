@@ -26,8 +26,8 @@ void mystery(Screen& screen,float len,float angle)
 		for(float j = 0; j < PI; j++)
 		{
 			screen.pixel(
-					PI+0+ORIGIN_X+(i*PI+j*PI/6) + std::cos(angle) * j/2,
-					PI*ORIGIN_Y/(i/2) + std::sin(angle) * i
+					i+PI+ORIGIN_X-(i-j*PI/9) + std::cos(angle) * i/2,
+					ORIGIN_Y/(i) + std::sin(angle) * i
 					);
 		}
 	}
