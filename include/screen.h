@@ -36,7 +36,7 @@ class Screen
 			SDL_RenderDrawPointF(renderer,point.x,point.y);
 		}
 		SDL_RenderPresent(renderer);
-		//SDL_Delay(3000);
+		SDL_Delay(3000); /* Window closes after 3sec */
 	}
 
 	void clear()

@@ -2,20 +2,17 @@
 #include "include/screen.h"
 #include "include/defs.h"
 
-void line(Screen&,float,float,float,float);
-void mystery(Screen&,float,float);
-
-struct vec3
-{
-	float x, y, z;
-};
-
 struct connection 
 {
 	int a, b;
 };
 
-void rotate(vec3& point, float x=1, float y=1, float z=1)
+struct vec3
+{
+	float x,y,z;
+};
+
+void rotate(vec3& point,float x=1, float y=1, float z=1)
 {
 	float rad = 0;
 
@@ -32,11 +29,14 @@ void rotate(vec3& point, float x=1, float y=1, float z=1)
 	point.y = std::sin(rad) * point.x + std::cos(rad) * point.y;
 }
 
+void line(Screen&,float,float,float,float);
+void mystery(Screen&,float,float);
+
 int main()
 {
 	/* Create screen */
 	Screen screen;
-
+	/*
 	std::vector<vec3> points {
 		{100,100,100},
 		{200,100,100},
@@ -66,8 +66,10 @@ int main()
 		{6,7},
 		{7,4}
 	};
+	*/
 
 	/* Calculate centroid */
+	/*
 	vec3 c{0,0,0};
 	for(auto& p : points)
 	{
@@ -78,8 +80,12 @@ int main()
 	c.x /= points.size();
 	c.y /= points.size();
 	c.z /= points.size();
+	*/
 
 	/* Output */
+	screen.show();
+
+	/*
 	while(true)
 	{
 		for(auto& p : points)
@@ -105,7 +111,7 @@ int main()
 		screen.input();
 		SDL_Delay(30);
 	}
-	
+	*/	
 
 
 

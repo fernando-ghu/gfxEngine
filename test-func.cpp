@@ -2,6 +2,8 @@
 #include "include/screen.h"
 #include "include/defs.h"
 
+
+
 void line(Screen& screen,float x1,float y1, float x2,float y2)
 {
 	float dx = x2 - x1;
@@ -32,3 +34,5 @@ void mystery(Screen& screen,float len,float angle)
 		}
 	}
 }
+
+
